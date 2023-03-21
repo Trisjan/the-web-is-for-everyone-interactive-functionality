@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+    font-family: rigid-square, sans-serif;
+    font-size: 20px;
+}
+
+html {
+    height: 100%;
+    --text-color: #343488;
+    --dark-blue: #090940;
+    --white: #ffffff;
+}
+
+nav {
+    color: var(--text-color);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    border-bottom: solid 1px #e0dedc;
+    max-width: 100%;
+}
+
+.logo {
+    margin: .5rem;
+    margin-left: 1.25em;
+}
+
+.logo img {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.navbar-links ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-links button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.navbar-links li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    font-weight: bold;
+    transition: 0.8s;
+}
+
+.navbar-links li a {
+    text-decoration: none;
+    display: block;
+    font-size: 0.7rem;
+    color: var(--dark-blue);
+}
+
+.navbar-links li:hover {
+    text-decoration: underline 1px var(--text-color);
+    transform: scale(1.2);
+}
+
+/* toggle button in navbar */
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: var(--dark-blue);
+    border-radius: 10px;
+}
+
+/* filter section */
+.filter {
+    max-width: 100%;
+    margin: 2rem;
+}
+
+
+/* method section */
+.methods {
+    max-width: 100%;
+    margin: 2rem;
+} 
+
+.method-card img {
+    max-width: 100%;
+    width: max-content;
+    height: max-content;
+}
+
+.method-card .method-info {
+    color: var(--text-color);
+    font-size: 0.8rem;
+    max-width: 100%;
+}
+
+.method-info {
+    margin: 0;
+}
+
+/* Tablet screens */
+@media (min-width: 28rem) {
+    .methods {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-gap: 1rem;
+    }
+}
+
+/* Laptop screens and bigger */
+@media (min-width: 50rem) {
+    .methods {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-gap: 1rem;
+    }
+
+    .logo img {
+        width: 3.2rem;
+        height: 3.2rem;
+    }
+
+    .navbar-links li a {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 64rem) {
+    .methods{
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-gap: 1rem;
+    }
+}
