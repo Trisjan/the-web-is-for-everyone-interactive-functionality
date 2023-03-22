@@ -3,5 +3,29 @@
     "dotenv": "^16.0.3",
     "ejs": "^3.1.9",
     "express": "^4.18.2"
-  }
+  },
+  "name": "the-web-is-for-everyone-interactive-functionality",
+  "description": "> _Fork_ deze leertaak en ga aan de slag. Onderstaande outline ga je gedurende deze taak in jouw eigen GitHub omgeving uitwerken. De instructie vind je in: [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)",
+  "version": "1.0.0",
+  "main": "app.js",
+  "type": "module",
+  "directories": {
+    "doc": "docs"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Trisjan/the-web-is-for-everyone-interactive-functionality.git"
+  },
+  "author": "Trisjan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Trisjan/the-web-is-for-everyone-interactive-functionality/issues"
+  },
+  "homepage": "https://github.com/Trisjan/the-web-is-for-everyone-interactive-functionality#readme"
 }

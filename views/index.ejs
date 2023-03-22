@@ -8,22 +8,24 @@
 
 <section class="methods">
   <% methods.forEach((method) => { %>
-  <article class="method-card">
-    <section class="method-img">
-    <% if (method.template && method.template.url) { %>
-      <img src="<%= method.template.url %>" alt="example of <%= method.title %>">
-    <% } else { %>
-      <img src="/assets/placeholder.jpg" alt="coming soon">
-      <% } %>
-    </section>
-    <section class="method-info">
-      <% if (method.slug != 'studieloopbaanbegeleidingsgesprek') { %>
-        <h2><%= method.title %></h2>
-      <% } else { %>
-        <h2>Studieloopbaanbegeleiding gesprek</h2>
-      <% } %>
-    </section>
-  </article>
+    <a href="/method/<%=method.slug %>">
+      <article class="method-card">
+        <section class="method-img">
+        <% if (method.template && method.template.url) { %>
+          <img src="<%= method.template.url %>" alt="example of <%= method.title %>">
+        <% } else { %>
+          <img src="/assets/placeholder.jpg" alt="coming soon">
+          <% } %>
+        </section>
+        <section class="method-info">
+          <% if (method.slug != 'studieloopbaanbegeleidingsgesprek') { %>
+            <h2><%= method.title %></h2>
+          <% } else { %>
+            <h2>Studieloopbaanbegeleiding gesprek</h2>
+          <% } %>
+        </section>  
+      </article>
+    </a>
   <% }); %>
 </section>
 
