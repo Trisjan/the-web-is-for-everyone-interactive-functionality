@@ -9,6 +9,7 @@ html {
     --text-color: #343488;
     --dark-blue: #090940;
     --white: #ffffff;
+    --imagebg: #F9F8F8;
 }
 
 nav {
@@ -99,10 +100,23 @@ nav {
     margin: 2rem;
 } 
 
+.methods a {
+    text-decoration: none;
+}
+
+.method-card {
+    transition: 1.2s;
+}
+
+.method-card:hover {
+    transform: scale(1.05);
+}
+
 .method-card img {
     max-width: 100%;
     width: max-content;
     height: max-content;
+    border: 0.2em solid var(--imagebg);
 }
 
 .method-card .method-info {

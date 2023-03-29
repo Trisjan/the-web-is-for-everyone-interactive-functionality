@@ -8,7 +8,7 @@
 
 <section class="methods">
   <% methods.forEach((method) => { %>
-    <a href="/method/<%=method.slug %>">
+    <a href="/method/<%= method.slug %>">
       <article class="method-card">
         <section class="method-img">
         <% if (method.template && method.template.url) { %>

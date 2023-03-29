@@ -1,0 +1,12 @@
+<%- include('./partials/head') %>
+
+<%- include('./partials/navbar') %>
+
+<% if (method.title != 0) { %>
+<h1><%= method.title %></h1>
+<% } else { %>
+<h1>het heeft geen titel L</h1>
+<% } %>
+<h2><%= method.description.html %></h2>
+
+<%- include('./partials/foot') %>
