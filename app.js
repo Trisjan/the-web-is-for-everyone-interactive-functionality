@@ -19,21 +19,12 @@ app.get("/", (request, response) => {
   });
 });
 
-// app.get("/method/:slug", async (request, response) => {
-//   const urlMethod = baseurl + 'method/' + request.params.slug
-//   // const slugUrl = request.params.slug || "/roadmap"
-//   // console.log(baseurl + "method/" + slugUrl)
-//   // const data = await fetch(baseurl + "method/" + slugUrl).then((response) => response.json())
-//   const data = await fetch(urlMethod).then((response) => response.json())
-//   console.log(data)
-
-//   response.render("method", data)
-// })
-
-
+// de route voor een geselecteerde method en daarvan de detail pagina
 app.get("/method/:slug", (request, response) => {
+  // pak de url variabele van de api + method/ + de meegegeven slug van de gekozen methode
   let detailPageUrl = url + "method/" + request.params.slug;
   fetchJson(detailPageUrl).then((data) => {
+    //render de view detail-page en geef de data mee
     response.render("detail-page", data);
   });
 });

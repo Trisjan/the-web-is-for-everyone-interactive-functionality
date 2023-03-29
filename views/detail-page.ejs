@@ -2,7 +2,26 @@
 
 <%- include('./partials/navbar') %>
 
-<h1><%= method.title %></h1>
-<h2><%= method.description.html %></h2>
+<section class="overzicht-nav">
+    <a href="/">
+        <img src="/assets/arrow-white.svg" 
+        alt="Back to overview page">
+        <span>OVERZICHT <strong>TEKENMETHODES</strong></span>
+    </a>
+</section>
+<section class="detail-smallnavbar">
+    <h1><%= method.title %></h1>
+    <ul>
+        <li><a href="">Template</a></li>
+        <li><a href="">Beschrijving</a></li>
+        <li><a href="">Stappenplan</a></li>
+        <li><a href="">Voorbeelden</a></li>
+        <li><a href="">Comments</a></li>
+    </ul>
+</section>
+<section class="detail-info">
+    <p><%- method.description.html %></p>
+</section>
+
 
 <%- include('./partials/foot') %>
