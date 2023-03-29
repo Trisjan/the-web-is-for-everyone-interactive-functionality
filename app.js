@@ -33,7 +33,6 @@ app.get("/", (request, response) => {
 
 app.get("/method/:slug", (request, response) => {
   let detailPageUrl = url + "method/" + request.params.slug;
-
   fetchJson(detailPageUrl).then((data) => {
     response.render("detail-page", data);
   });
