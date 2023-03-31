@@ -98,7 +98,6 @@ nav {
 .method-card img {
     max-width: 100%;
     width: max-content;
-    height: max-content;
     border: 0.2em solid var(--imagebg);
 }
 
