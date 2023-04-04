@@ -5,7 +5,19 @@
 <%- include('./partials/overview-nav') %>
 
 
-
+<section class="detail-body">
+    <section class="detail-info">
+        <% method.steps.forEach(step=> { %>
+            <h2 class="tag-steps">
+                <%= step?.title %>
+            </h2>
+            <h3 class="description">
+                <%- step.description?.html %>
+            </h3>
+            <img src="<%- step.visual %>" alt="">
+            <% }) %>
+    </section>
+</section>
 
 
 <%- include('./partials/foot') %>

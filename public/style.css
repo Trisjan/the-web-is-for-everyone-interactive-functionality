@@ -15,6 +15,7 @@ html {
     --white: #ffffff;
     --imagebg: #F9F8F8;
     --orange: #FEB51E;
+    --grey: #625c51;
     --rigid: rigid-square, sans-serif;
 }
 
@@ -204,10 +205,21 @@ section.overzicht-nav a span strong {
     font-weight: bold;
 
     padding: 0.3rem;
-    margin: 0 0.4rem;
+    margin: 0 1rem;
 
     display: flex;
     align-items: center;
+    max-width: 100%;
+}
+
+.tag-steps {
+    background-color: var(--orange);
+    color: var(--text-color);
+    font-family: var(--rigid);
+    font-size: 0.45rem;
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
 }
 
 .feature {
@@ -222,7 +234,7 @@ section.overzicht-nav a span strong {
 
 .detail-info p,blockquote,div {
     font-size: 0.6rem;
-    margin: 1rem;
+    margin: 1rem 0;
     color: var(--dark-blue);
 }
 
@@ -245,6 +257,23 @@ section.overzicht-nav a span strong {
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 /* STAPPENPLAN */
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+.detail-body {
+    justify-content: flex-start;
+    margin: 0 1rem;
+    margin-top: 1.5rem;
+}
+
+.description {
+    font-size: 1rem;
+    font-family: var(--yrsa);
+    color: var(--text-color);
+    line-height: 1.5rem;
+}
+
+.description p {
+    margin-top: 0.25rem;
+    margin-bottom: 1rem;
+}
 
 
 
@@ -257,6 +286,26 @@ section.overzicht-nav a span strong {
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 /* COMMENTS */
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+/* FOOTER */
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+footer {
+    background-color: var(--grey);
+    color: var(--imagebg);
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+footer h3 {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    padding: 0.5rem;
+}
+
 
 
 /* Tablet screens */
@@ -315,7 +364,7 @@ section.overzicht-nav a span strong {
         margin: 1.5rem 0;
     }
 
-    .tag {
+    .tag,.tag-steps {
         font-size: 0.8rem;
     }
 
@@ -330,10 +379,14 @@ section.overzicht-nav a span strong {
 
     .detail-info p,blockquote,div {
         font-size: 0.8rem;
-        margin: 1rem 2rem;
+        margin: 1rem 0rem;
     }
 
     .detail-method-img img {
+        margin: 0 2rem;
+    }
+
+    .detail-body {
         margin: 0 2rem;
     }
 }
@@ -369,6 +422,23 @@ section.overzicht-nav a span strong {
         font-size: 2.5rem;
     }
 
+    .detail-features {
+        margin: 2rem 0;
+    }
+
+    .tag,.tag-steps {
+        font-size: 1rem;
+    }
+
+    .feature {
+        margin-bottom: 1.5rem;
+    }
+    
+    .feature img {
+        height: 2rem;
+        width: 2rem;
+    }
+
     section.overzicht-nav a {
         margin: 0 5em;
     }
@@ -392,7 +462,7 @@ section.overzicht-nav a span strong {
 
     .detail-info p,blockquote,div {
         font-size: 1rem;
-        margin: 0 5rem;
+        margin: 0 0rem;
     }
 
     .detail-method-img img {
@@ -404,6 +474,10 @@ section.overzicht-nav a span strong {
     .img-info {
         margin-right: 5rem;
         margin-bottom: 5rem;
+    }
+
+    .detail-body {
+        margin: 0 5rem;
     }
 }
 
