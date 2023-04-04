@@ -4,13 +4,42 @@
 
 <%- include('./partials/overview-nav') %>
 
-<section>
-    <img src="<%= method." alt="">
-</section>
+<section class="detail-body">
+    <section class="detail-info">
+        <section class="detail-features">
+            <div class="feature">
+                <img src="/assets/categorie.svg" alt="categorie logo">
+                <% method.categories.forEach(category=> { %>
+                    <h2 class="tag">
+                        <%= category?.title %>
+                    </h2>
+                <% }) %>
+            </div>
+            <div class="feature">
+                <img src="/assets/materiaal.svg" alt="materiaal logo">
+                <h2 class="tag"><%= method.material %></h2>
+            </div>
+            <div class="feature">
+                <img src="/assets/tijd.svg" alt="tijd logo">
+                <h2 class="tag"><%= method.duration %></h2>
+            </div>
+            <div class="feature">
+                <img src="/assets/user.svg" alt="user logo">
+                <h2 class="tag">Charley Muhren</h2>
+            </div>
+        </section>
+        <p>
+            <%- method.description.html %>
+        </p>
+    </section>
 
-<section class="detail-info">
-    <p><%- method.description.html %></p>
+    <section class="img-info">
+        <% if (method.template && method.template.url) { %>
+            <img class="detail-method-img" src="<%= method.template.url %>" alt="example of <%= method.title %>">
+        <% } else { %>
+            <img class="detail-method-img" src="/assets/placeholder.jpg" alt="coming soon">
+        <% } %>
+    </section>
 </section>
-
 
 <%- include('./partials/foot') %>

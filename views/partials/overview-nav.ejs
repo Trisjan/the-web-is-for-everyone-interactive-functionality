@@ -8,9 +8,9 @@
 <section class="detail-smallnavbar">
     <h1><%= method.title %></h1>
     <ul>
-        <li><a href="">Beschrijving</a></li>
-        <li><a href="">Stappenplan</a></li>
-        <li><a href="">Voorbeelden</a></li>
-        <li><a href="">Comments</a></li>
+        <li><a href="/method/<%= method.slug %>">Beschrijving</a></li>
+        <li><a href="/method/<%= method.slug %>/stappenplan">Stappenplan</a></li>
+        <li><a href="/method/<%= method.slug %>/examples">Voorbeelden</a></li>
+        <li><a href="/method/<%= method.slug %>/comments?id=<%= method.id %>">Comments</a></li>
     </ul>
 </section>

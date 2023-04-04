@@ -1,8 +1,10 @@
 * {
     box-sizing: border-box;
-    font-family: rigid-square, sans-serif;
     margin: 0;
     padding: 0;
+    font-size: 20px;
+    font-family: "yrsa", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
 }
 
 html {
@@ -12,8 +14,20 @@ html {
     --dark-blue: #090940;
     --white: #ffffff;
     --imagebg: #F9F8F8;
-    font-size: 20px;
+    --orange: #FEB51E;
+    --rigid: rigid-square, sans-serif;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--rigid);
+}
+
+
 
 nav {
     color: var(--text-color);
@@ -30,7 +44,7 @@ nav {
 
 .logo {
     margin: .5rem;
-    margin-left: 2.5em;
+    margin-left: 1em;
 }
 
 .logo img {
@@ -40,7 +54,6 @@ nav {
 
 .navbar-links ul {
     margin: 0;
-    margin-right: 1.5em;
     padding: 0;
     display: flex;
 }
@@ -89,6 +102,7 @@ nav {
 
 .method-card {
     transition: 1.2s;
+    margin: 2rem 0;
 }
 
 .method-card:hover {
@@ -116,6 +130,9 @@ nav {
 /* DETAIL PAGE */
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+/* OVERVIEW-NAV */
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
 section.overzicht-nav {
     background-color: var(--detail-nav);
@@ -125,31 +142,210 @@ section.overzicht-nav {
 section.overzicht-nav a {
     text-decoration: none;
     color: var(--white);
-    margin: 0 2em;
+    margin: 0 1em;
     display: flex;
     align-items: center;
 }
 
+section.overzicht-nav a img{
+    height: 0.5rem;
+    width: 0.5rem;
+}
+
 section.overzicht-nav a span {
     margin: 0 0.5em;
+    font-size: 0.5rem;
 }
+
+section.overzicht-nav a span strong {
+    font-size: 0.5rem;
+}
+
+.detail-smallnavbar {
+    margin: 1rem;
+    max-width: 100%;
+    color: var(--dark-blue);
+}
+
+.detail-smallnavbar ul {
+    list-style: none;
+    display: flex;
+    max-width: 100%;
+    margin-top: 0.5rem;
+}
+
+.detail-smallnavbar ul li {
+    text-decoration: none;
+    margin-right: 1rem;
+}
+
+.detail-smallnavbar ul li a {
+    font-size: 0.6rem;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--detail-nav);
+    font-family: var(--rigid);
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+/* BESCHRIJVING */
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+.detail-info {
+    margin: 1rem 0;
+}
+
+.tag {
+    background-color: var(--orange);
+    color: var(--text-color);
+    font-family: var(--rigid);
+    font-size: 0.45rem;
+    font-weight: bold;
+
+    padding: 0.3rem;
+    margin: 0 0.4rem;
+
+    display: flex;
+    align-items: center;
+}
+
+.feature {
+    display: flex;
+    justify-content: left;
+}
+
+.feature img {
+    height: 1.2rem;
+    width: 1.2rem;
+}
+
+.detail-info p,blockquote,div {
+    font-size: 0.6rem;
+    margin: 1rem;
+    color: var(--dark-blue);
+}
+
+.detail-method-img {
+    max-width: 100%;
+}
+
+.detail-method-img img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1rem;
+}
+
+.img-info {
+    border: 0.2em solid var(--imagebg);
+    margin: 2rem;
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+/* STAPPENPLAN */
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+/* VOORBEELDEN */
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+/* COMMENTS */
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
 
 /* Tablet screens */
-@media (min-width: 28rem) {
+@media (min-width: 31em) {
+    .logo {
+        margin-left: 1.5em;
+    }
+
+    .method-card {
+        margin: 0;
+    }
+
     .methods {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        grid-gap: 1rem;
+        grid-gap: 2rem;
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+    
+    section.overzicht-nav a {
+        margin: 0 2em;
+    }
+
+    section.overzicht-nav a img{
+        height: 0.8rem;
+        width: 0.8rem;
+    }
+    
+    section.overzicht-nav a span {
+        font-size: 0.8rem;
+    }
+    
+    section.overzicht-nav a span strong {
+        font-size: 0.8rem;
+    }
+
+    .detail-smallnavbar {
+        margin: 1rem 2rem;
+    }
+
+    .detail-smallnavbar h1 {
+        font-size: 1.5rem;
+    }
+
+    .detail-smallnavbar ul {
+        margin: 0.5rem 0;
+        font-size: 1rem;
+    }
+
+    .detail-smallnavbar ul li a {
+        font-size: 0.9rem;
+    }
+
+    .detail-features {
+        margin: 1.5rem 0;
+    }
+
+    .tag {
+        font-size: 0.8rem;
+    }
+
+    .feature {
+        margin-bottom: 1rem;
+    }
+    
+    .feature img {
+        height: 2rem;
+        width: 2rem;
+    }
+
+    .detail-info p,blockquote,div {
+        font-size: 0.8rem;
+        margin: 1rem 2rem;
+    }
+
+    .detail-method-img img {
+        margin: 0 2rem;
     }
 }
 
 /* Laptop screens and bigger */
-@media (min-width: 50rem) {
+@media (min-width: 45em) {
     .methods {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
-        grid-gap: 1rem;
+        grid-gap: 2rem;
+        margin-left: 5rem;
+        margin-right: 5rem;
     }
 
     .logo img {
@@ -157,15 +353,77 @@ section.overzicht-nav a span {
         height: 3.2rem;
     }
 
+    .navbar-links {
+        margin-right: 3rem;
+    }
+
     .navbar-links li a {
         font-size: 1rem;
     }
+
+    .detail-smallnavbar {
+        margin: 2rem 5rem;
+    }
+
+    .detail-smallnavbar h1 {
+        font-size: 2.5rem;
+    }
+
+    section.overzicht-nav a {
+        margin: 0 5em;
+    }
+
+    section.overzicht-nav a img{
+        height: 1rem;
+        width: 1rem;
+    }
+    
+    section.overzicht-nav a span {
+        font-size: 1rem;
+    }
+    
+    section.overzicht-nav a span strong {
+        font-size: 1rem;
+    }
+
+    .detail-smallnavbar ul li a {
+        font-size: 1.2rem;
+    }
+
+    .detail-info p,blockquote,div {
+        font-size: 1rem;
+        margin: 0 5rem;
+    }
+
+    .detail-method-img img {
+        margin: 0 5rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    .img-info {
+        margin-right: 5rem;
+        margin-bottom: 5rem;
+    }
 }
 
-@media (min-width: 64rem) {
+@media (min-width: 68em) {
     .methods{
         display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        grid-gap: 1rem;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-gap: 2rem;
+        margin-left: 5rem;
+        margin-right: 5rem;
+    }
+
+    .detail-info {
+        margin: 1rem 0;
+        display: grid;
+    }
+
+    .detail-body {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-gap: 2rem;
     }
 }

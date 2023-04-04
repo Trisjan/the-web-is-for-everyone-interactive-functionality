@@ -1,4 +1,4 @@
-import express from "express";
+import express, { request, response } from "express";
 
 // API en de data fetchen
 const url = "https://api.visualthinking.fdnd.nl/api/v1/";
@@ -26,6 +26,34 @@ app.get("/method/:slug", (request, response) => {
   fetchJson(detailPageUrl).then((data) => {
     //render de view detail-page en geef de data mee
     response.render("detail-page", data);
+  });
+});
+
+app.get("/method/:slug/stappenplan", (request, response) => {
+  let detailPageUrl = url + "method/" + request.params.slug;
+  fetchJson(detailPageUrl).then((data) => {
+    //render de view steps en geef de data mee
+    response.render("stappenplan", data);
+  });
+});
+
+app.get("/method/:slug/examples", (request, response) => {
+  let detailPageUrl = url + "method/" + request.params.slug;
+  fetchJson(detailPageUrl).then((data) => {
+    //render de view examples en geef de data mee
+    response.render("examples", data);
+  });
+});
+
+app.get("/method/:slug/comments", (request, response) => {
+  let commentUrl = url + "method/" + request.params.slug + "/comments?id=" + request.params.methodid;
+  let detailPageUrl = `${url}comments` + "?id=" + request.query.id;
+  fetchJson(detailPageUrl).then((data) => {
+    fetchJson(commentUrl).then((data2) => {
+      const newdata = { detail: data, form: data2, slug: request.params.slug }
+    //render de view steps en geef de data mee
+    response.render("comments", newdata);
+    });
   });
 });
 
