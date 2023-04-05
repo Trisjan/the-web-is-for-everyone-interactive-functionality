@@ -281,13 +281,139 @@ section.overzicht-nav a span strong {
 /* VOORBEELDEN */
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
+.carousel {
+    position: relative;
+    height: 27.5rem;
+    width: 100%;
+    margin: 0 auto;
+}
 
+.carousel-img-blur {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(0.2rem);
+    position: absolute;
+}
+
+.carousel-img {
+    z-index: 1;
+}
+
+.carousel-container {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+    height: 100%;
+    transition: transform 250ms ease-in;
+}
+
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+}
+
+.carousel-button-left,
+.carousel-button-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--orange);
+    border: 0;
+    cursor: pointer;
+    z-index: 1;
+    padding: 0.5rem;
+}
+
+.carousel-button-right {
+    right: 0%;
+}
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 /* COMMENTS */
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
+.detail-body .comments h2 {
+    color: var(--dark-blue);
+}
 
+.detail-body .message {
+    color: var(--grey);
+    opacity: 50%;
+}
+
+.detail-body .comments .comment {
+    border: 0.2em solid var(--imagebg);
+    margin-bottom: 1rem;
+}
+
+.detail-body .comments .comment .comment-name {
+    background-color: var(--orange);
+    color: var(--dark-blue);
+    padding: 0.2rem;
+    margin-bottom: 0.3rem;
+}
+
+.detail-body .comments .comment .comment-text {
+    color: var(--dark-blue);
+    margin: 0.2rem;
+}
+
+label,
+input {
+    width: 100%
+}
+
+label {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: var(--yrsa);
+    color: var(--dark-blue);
+}
+
+legend {
+    color: var(--bluelight);
+    text-transform: uppercase;
+    font-family: var(--rigid);
+    margin-bottom: 0.5rem;
+}
+
+input {
+    font-size: 1.5em;
+    background-color: #e8e8e8;
+    border: 0.05rem solid #fafafa;
+    font-family: var(--rigid);
+    transition: 1.2s;
+}
+
+.submit-button {
+    margin-top: 1rem;
+    background-color: var(--detail-nav);
+    color: var(--white);
+    font-family: var(--rigid);
+    transition: 1.2s;
+}
+
+.submit-button:hover {
+    transform: scale(1.1);
+}
+
+fieldset {
+    border-style: none;
+    width: 75%;
+}
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 /* FOOTER */

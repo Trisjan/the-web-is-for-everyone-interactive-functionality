@@ -11,6 +11,10 @@ app.set("view engine", "ejs");
 app.set("views", "./views");
 app.use(express.static("public"));
 
+// Stel afhandeling van formulieren inzx
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
+
 // Maak een route voor de index
 app.get("/", (request, response) => {
   let methodsUrl = url + "/methods?first=100";
@@ -133,7 +137,6 @@ async function fetchJson(url) {
 }
 
 
-
 /**
  * postJson() is a wrapper for the experimental node fetch api. It fetches the url
  * passed as a parameter using the POST method and the value from the body paramater
@@ -146,10 +149,8 @@ export async function postJson(url, body) {
   return await fetch(url, {
       method: 'post',
       body: JSON.stringify(body),
-      headers: {
-        'Content-Type': 'application/json'
-      },
-    })
-    .then((response) => response.json())
-    .catch((error) => error)
+      headers: { 'Content-Type': 'application/json' },
+  })
+      .then((response) => response.json())
+      .catch((error) => error)
 }

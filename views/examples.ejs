@@ -4,6 +4,24 @@
 
 <%- include('./partials/overview-nav') %>
 
+<section class="carousel">
+    <button class="carousel-button-left">
+        <img src="/assets/buttonL.svg" alt="">
+    </button>
+    <section class="carousel-container">
+        <ul class="carousel-list">
+            <% method.examples.forEach(example=> { %>
+                <li class="carousel-slide current-slide">
+                    <img class="carousel-img-blur" src="<%- example?.url %>" alt="">
+                    <img class="carousel-img" src="<%- example?.url %>" alt="">
+                </li>
+                <% }) %>
+        </ul>
 
+    </section>
+    <button class="carousel-button-right">
+        <img src="/assets/buttonR.svg" alt="">
+    </button>
+</section>
 
 <%- include('./partials/foot') %>
