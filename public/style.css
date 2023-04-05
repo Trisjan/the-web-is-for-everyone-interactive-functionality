@@ -28,7 +28,11 @@ h6 {
     font-family: var(--rigid);
 }
 
-
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
 
 nav {
     color: var(--text-color);
@@ -435,7 +439,7 @@ footer {
     background-color: var(--grey);
     color: var(--imagebg);
     padding: 2rem;
-    margin-top: 3rem;
+    margin-top: auto;
 }
 
 footer h3 {
