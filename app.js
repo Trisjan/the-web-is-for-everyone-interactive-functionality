@@ -58,7 +58,7 @@ app.post('/method/:slug/comment', (request, response) => {
   const baseurl = "https://api.visualthinking.fdnd.nl/api/v1/";
   const url = `${baseurl}comments`;
 
-  console.log("versuurd:");
+  console.log("verstuurd:");
   console.log(request.body);
 
     postJson(url, request.body).then((data) => {
