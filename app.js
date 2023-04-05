@@ -46,16 +46,35 @@ app.get("/method/:slug/examples", (request, response) => {
 });
 
 app.get("/method/:slug/comments", (request, response) => {
-  let commentUrl = url + "method/" + request.params.slug + "/comments?id=" + request.params.methodid;
-  let detailPageUrl = `${url}comments` + "?id=" + request.query.id;
-  fetchJson(detailPageUrl).then((data) => {
-    fetchJson(commentUrl).then((data2) => {
-      const newdata = { detail: data, form: data2, slug: request.params.slug }
+  let commentUrl = url + "method/" + request.params.slug;
+  console.log(commentUrl);
+  fetchJson(commentUrl).then((data) => {
     //render de view steps en geef de data mee
-    response.render("comments", newdata);
-    });
+    response.render("comments", data);
   });
 });
+
+app.post('/method/:slug/comment', (request, response) => {
+  const baseurl = "https://api.visualthinking.fdnd.nl/api/v1/";
+  const url = `${baseurl}comments`;
+
+  console.log("versuurd:");
+  console.log(request.body);
+
+    postJson(url, request.body).then((data) => {
+    console.log("ontvangen:");
+    console.log(data);
+    if (data.success) {
+      response.redirect(
+        "/method/" + request.params.slug + "/comments?methodPosted=true"
+      );
+    } else {
+      response.redirect(
+        "/method/" + request.params.slug + "/comments?methodPosted=false"
+      );
+    }
+  })
+})
 
 // Het poortnummer waarop de site lokaal gedraait wordt
 app.set("port", process.env.PORT || 8000);
