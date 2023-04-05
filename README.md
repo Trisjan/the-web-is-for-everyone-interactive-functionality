@@ -14,8 +14,17 @@ Visual thinking wordt een platform met onderwijsmateriaal voor docenten en stude
 
 ## Beschrijving
 * Userstory: _Als docent wil ik een reactie kunnen schrijven op een werkvorm zodat ik zelf kan aangeven wat ik de toegevoegde waarde vind van een werkvorm._
-<!-- Voeg een mooie poster visual toe 📸 -->
-<!-- Voeg een link toe naar Github Pages 🌐-->
+### Overzichtspagina
+![image](https://user-images.githubusercontent.com/74552944/230207479-e12b686f-4268-48c8-9b4a-562ea73d3b14.png)
+https://weak-red-chiton.cyclic.app/
+
+### Detailpagina
+![image](https://user-images.githubusercontent.com/74552944/230207642-a94dcbb8-49e2-41d7-847a-01a6b307c948.png)
+https://weak-red-chiton.cyclic.app/method/feedback
+
+### Comments pagina
+![image](https://user-images.githubusercontent.com/74552944/230207726-84970f76-a083-4514-854c-156c11666052.png)
+https://weak-red-chiton.cyclic.app/method/feedback/form?id=clfflt1kf3r7y0buupwnxqdad
 
 ## Gebruik
 * Node
@@ -27,10 +36,10 @@ Visual thinking wordt een platform met onderwijsmateriaal voor docenten en stude
 * Javascript
 
 ## Kenmerken
-Voor de installatie van Node als je dit project forked doe je het volgende in de terminal npm install
+Voor de installatie van Node als je dit project forked doe je het volgende in de terminal `npm install`
 
 ## Installatie
-Voor het draaien van een server lokaal op je laptop doe je het volgende in de terminal npm start
+Voor het draaien van een server lokaal op je laptop doe je het volgende in de terminal `npm start`
 
 
 ## Bronnen
