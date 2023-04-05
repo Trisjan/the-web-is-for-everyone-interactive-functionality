@@ -45,34 +45,70 @@ app.get("/method/:slug/examples", (request, response) => {
   });
 });
 
-app.get("/method/:slug/comments", (request, response) => {
-  let commentUrl = url + "method/" + request.params.slug;
-  console.log(commentUrl);
-  fetchJson(commentUrl).then((data) => {
-    //render de view steps en geef de data mee
-    response.render("comments", data);
-  });
-});
+// app.get("/method/:slug/comments", (request, response) => {
+//   let commentUrl = url + "method/" + request.params.slug;
+//   console.log(commentUrl);
+//   fetchJson(commentUrl).then((data) => {
+//     //render de view steps en geef de data mee
+//     response.render("comments", data);
+//   });
+// });
 
-app.post('/method/:slug/comment', (request, response) => {
-  const baseurl = "https://api.visualthinking.fdnd.nl/api/v1/";
-  const url = `${baseurl}comments`;
+// app.post('/method/:slug/comment', (request, response) => {
+//   const baseurl = "https://api.visualthinking.fdnd.nl/api/v1/";
+//   const url = `${baseurl}comments`;
 
-  console.log("verstuurd:");
-  console.log(request.body);
+//   console.log("verstuurd:");
+//   console.log(request.body);
 
-    postJson(url, request.body).then((data) => {
-    console.log("ontvangen:");
-    console.log(data);
-    if (data.success) {
-      response.redirect(
-        "/method/" + request.params.slug + "/comments?methodPosted=true"
-      );
-    } else {
-      response.redirect(
-        "/method/" + request.params.slug + "/comments?methodPosted=false"
-      );
-    }
+//     postJson(url, request.body).then((data) => {
+//     console.log("ontvangen:");
+//     console.log(data);
+//     if (data.success) {
+//       response.redirect(
+//         "/method/" + request.params.slug + "/comments?methodPosted=true"
+//       );
+//     } else {
+//       response.redirect(
+//         "/method/" + request.params.slug + "/comments?methodPosted=false"
+//       );
+//     }
+//   })
+// })
+
+app.get('/method/:slug/form', (request, response) => {
+
+  const baseurl = "https://api.visualthinking.fdnd.nl/api/v1/"
+  const commentUrl = `${baseurl}comments` + "?id=" + request.query.id
+
+  let detailPageUrl = baseurl + "method/" + request.params.slug;
+
+  fetchJson(detailPageUrl).then((data) => {
+      fetchJson(commentUrl).then((data2) => {
+          const newdata = { detail: data, form: data2, slug: request.params.slug }
+          response.render('form', newdata)
+      })
+  })
+})
+
+app.post('/method/:slug/form', (request, response) => {
+
+  const baseurl = "https://api.visualthinking.fdnd.nl/api/v1/"
+  const url = `${baseurl}comments`
+
+  postJson(url, request.body).then((data) => {
+      let newComment = { ...request.body }
+
+      console.log(newComment);
+
+      if (data.success) {
+          response.redirect("/method/" + request.params.slug + "/form?id=" + request.body.methodId)
+      } else {
+          const errormessage = `${data.message}: Werkt niet:(`
+          const newdata = { error: errormessage, values: newComment }
+
+          response.render('form', newdata)
+      }
   })
 })
 
