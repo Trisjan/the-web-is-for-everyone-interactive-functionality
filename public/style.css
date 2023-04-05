@@ -128,7 +128,7 @@ nav {
 
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-/* DETAIL PAGE */
+/* DETAIL PAGES */
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
@@ -173,15 +173,17 @@ section.overzicht-nav a span strong {
     display: flex;
     max-width: 100%;
     margin-top: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.detail-smallnavbar ul li {
+.detail-smallnavbar ul a{
     text-decoration: none;
     margin-right: 1rem;
 }
 
-.detail-smallnavbar ul li a {
-    font-size: 0.6rem;
+.detail-smallnavbar ul a li {
+    font-size: 1rem;
     text-decoration: none;
     font-weight: bold;
     text-transform: uppercase;
@@ -345,13 +347,19 @@ section.overzicht-nav a span strong {
 /* COMMENTS */
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
+.detail-body .comments {
+    margin-top: 2rem;
+}
+
 .detail-body .comments h2 {
     color: var(--dark-blue);
+    font-size: 0.5rem;
 }
 
 .detail-body .message {
     color: var(--grey);
     opacity: 50%;
+    font-size: 0.45rem;
 }
 
 .detail-body .comments .comment {
@@ -363,12 +371,14 @@ section.overzicht-nav a span strong {
     background-color: var(--orange);
     color: var(--dark-blue);
     padding: 0.2rem;
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.15rem;
+    font-size: 0.5rem;
 }
 
 .detail-body .comments .comment .comment-text {
     color: var(--dark-blue);
     margin: 0.2rem;
+    font-size: 0.45rem;
 }
 
 label,
@@ -381,6 +391,7 @@ label {
     font-weight: bold;
     font-family: var(--yrsa);
     color: var(--dark-blue);
+    font-size: 0.5rem;
 }
 
 legend {
@@ -388,14 +399,15 @@ legend {
     text-transform: uppercase;
     font-family: var(--rigid);
     margin-bottom: 0.5rem;
+    font-size: 0.5rem;
 }
 
 input {
-    font-size: 1.5em;
     background-color: #e8e8e8;
     border: 0.05rem solid #fafafa;
     font-family: var(--rigid);
     transition: 1.2s;
+    font-size: 0.4rem;
 }
 
 .submit-button {
@@ -404,6 +416,7 @@ input {
     color: var(--white);
     font-family: var(--rigid);
     transition: 1.2s;
+    font-size: 0.5rem;
 }
 
 .submit-button:hover {
@@ -482,7 +495,7 @@ footer h3 {
         font-size: 1rem;
     }
 
-    .detail-smallnavbar ul li a {
+    .detail-smallnavbar ul a li {
         font-size: 0.9rem;
     }
 
@@ -514,6 +527,39 @@ footer h3 {
 
     .detail-body {
         margin: 0 2rem;
+    }
+
+    .detail-body .comments h2 {
+        font-size: 0.8rem;
+    }
+    
+    .detail-body .message {
+        font-size: 0.75rem;
+    }
+    
+    .detail-body .comments .comment .comment-name {
+        margin-bottom: 0.2rem;
+        font-size: 0.8rem;
+    }
+    
+    .detail-body .comments .comment .comment-text {
+        font-size: 0.75rem;
+    }
+    
+    label {
+        font-size: 0.8rem;
+    }
+    
+    legend {
+        font-size: 0.8rem;
+    }
+    
+    input {
+        font-size: 0.7rem;
+    }
+    
+    .submit-button {
+        font-size: 0.8rem;
     }
 }
 
@@ -582,7 +628,7 @@ footer h3 {
         font-size: 1rem;
     }
 
-    .detail-smallnavbar ul li a {
+    .detail-smallnavbar ul a li {
         font-size: 1.2rem;
     }
 
@@ -605,6 +651,39 @@ footer h3 {
     .detail-body {
         margin: 0 5rem;
     }
+
+    .detail-body .comments h2 {
+        font-size: 1.2rem;
+    }
+    
+    .detail-body .message {
+        font-size: 1rem;
+    }
+    
+    .detail-body .comments .comment .comment-name {
+        margin-bottom: 0.3rem;
+        font-size: 1rem;
+    }
+    
+    .detail-body .comments .comment .comment-text {
+        font-size: 0.9rem;
+    }
+    
+    label {
+        font-size: 1.2rem;
+    }
+    
+    legend {
+        font-size: 1.2rem;
+    }
+    
+    input {
+        font-size: 1rem;
+    }
+    
+    .submit-button {
+        font-size: 1.2rem;
+    }
 }
 
 @media (min-width: 68em) {
@@ -625,5 +704,9 @@ footer h3 {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
         grid-gap: 2rem;
+    }
+
+    .detail-body .comments {
+        margin-top: 0rem;
     }
 }
