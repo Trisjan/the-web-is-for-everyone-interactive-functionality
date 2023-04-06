@@ -35,6 +35,11 @@ https://weak-red-chiton.cyclic.app/method/feedback/form?id=clfflt1kf3r7y0buupwnx
 * HTML
 * Javascript
 
+### Progressive enhancement
+Progressive enhancement is een code strategy waarmee je kan zorgen dat je website het altijd doet.
+
+Progressive enhancement betekent dat je de essentiele content en functionaliteiten voor zo veel mogelijk gebruikers toegankelijk maakt die misschien niet super moderne device's of browsers hebben. Maar er ook nog steeds de beste experience mogelijk geven voor gebruikers met moderne browsers die wel meer geavenceerde code kunnen ondersteunen.
+
 ## Kenmerken
 Voor de installatie van Node als je dit project forked doe je het volgende in de terminal `npm install`
 
