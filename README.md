@@ -48,6 +48,10 @@ Voor het draaien van een server lokaal op je laptop doe je het volgende in de te
 
 
 ## Bronnen
+* https://nodejs.org/api/n-api.html
+* https://github.com/kosterm14/the-web-is-for-everyone-interactive-functionality
+* https://www.uxpin.com/studio/blog/a-hands-on-guide-to-mobile-first-design/
+* https://www.youtube.com/watch?v=VYsVOamdB0g
 
 ## Licentie
 
